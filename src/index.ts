@@ -4,7 +4,12 @@ import { setCustomEnv, ForgoNode, render } from "forgo";
 const { parseHTML } = require("linkedom");
 
 // now you can do the same as you would with JSDOM
-const { window, document } = parseHTML("<html><body></body></html>");
+const { window, document, HTMLElement } = parseHTML(
+  "<html><body></body></html>"
+);
+
+window.HTMLElement = HTMLElement;
+window.Text = document.createTextNode().constructor;
 
 setCustomEnv({
   window,
@@ -13,6 +18,5 @@ setCustomEnv({
 
 export default function renderToString(forgoNode: ForgoNode) {
   const { node } = render(forgoNode);
-  // console.log(typeof node, node);
   return node.toString();
 }
