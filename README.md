@@ -1,6 +1,6 @@
 # Forgo Server Side Rendering
 
-Allows you to render a forgo component into a string.
+Allows you to render a [forgo component](https://forgojs.org) into a string.
 
 ## Installation
 
