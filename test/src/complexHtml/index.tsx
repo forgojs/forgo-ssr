@@ -1,7 +1,7 @@
 import "mocha";
 import "should";
 
-import { renderToString } from "../../../";
+import render from "../../../";
 
 function Parent() {
   return {
@@ -39,7 +39,7 @@ function ChildItem() {
 
 export default function () {
   it("renders a complex component", () => {
-    const result = renderToString(<Parent />);
+    const result = render(<Parent />);
     result.should.equal(
       `<div data-app-name="test" id="myapp"><p>one</p><p>two</p><p>three</p></div>`
     );

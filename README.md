@@ -1,22 +1,29 @@
 # Forgo Server Side Rendering
 
-Allows you to render a forgo node tree into a string.
+Allows you to render a forgo component into a string.
 
-## The renderToString() function
+## Installation
+
+```sh
+npm i forgo-ssr
+```
+
+## Rendering to a string
+
+This is quite simple really.
 
 ```tsx
-import { renderToString } from "forgo-ssr";
+import render from "forgo-ssr";
 
 // A forgo component.
-function Component() {
+function MyComponent() {
   return {
-    render(props) {
-      return <p id="live-scores">Top score is {props.topscore}</p>;
+    render() {
+      return <div>Hello world</div>;
     },
   };
 }
 
-const html = renderToString(<Component />);
-
-
+// Get the html (string) and serve it via koa, express etc.
+const html = render(<MyComponent />);
 ```

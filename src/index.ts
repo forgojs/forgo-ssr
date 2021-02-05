@@ -11,7 +11,7 @@ setCustomEnv({
   document,
 });
 
-export function renderToString(forgoNode: ForgoNode) {
+export default function renderToString(forgoNode: ForgoNode) {
   const { node } = render(forgoNode);
   // console.log(typeof node, node);
   return node.toString();

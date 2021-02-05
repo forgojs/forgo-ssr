@@ -1,7 +1,7 @@
 import "mocha";
 import "should";
 
-import { renderToString } from "../../../";
+import render from "../../../";
 
 function MyComponent() {
   return {
@@ -13,7 +13,7 @@ function MyComponent() {
 
 export default function () {
   it("renders a simple component", () => {
-    const result = renderToString(<MyComponent />);
+    const result = render(<MyComponent />);
     result.should.equal("<div>Hello world</div>");
   });
 }
