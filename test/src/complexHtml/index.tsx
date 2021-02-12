@@ -29,7 +29,7 @@ function Child() {
   };
 }
 
-function ChildItem() {
+function ChildItem(props: any) {
   return {
     render(props: any) {
       return <p>{props.name}</p>;
