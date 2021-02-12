@@ -1,12 +1,13 @@
 {
   "name": "forgo-ssr",
-  "version": "0.0.16",
+  "version": "0.0.17",
   "author": "Jeswin Kumar<jeswinpk@agilehead.com>",
   "repository": {
     "type": "git",
     "url": "https://github.com/forgojs/forgo-ssr"
   },
   "main": "./dist",
+  "types": "./dist/index.d.ts",
   "dependencies": {
     "forgo": "^0.0.61",
     "linkedom": "^0.3.13"
