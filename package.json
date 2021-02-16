@@ -10,7 +10,7 @@
   "types": "./dist/index.d.ts",
   "dependencies": {
     "forgo": "^0.0.65",
-    "linkedom": "^0.3.13"
+    "linkedom": "^0.4.21"
   },
   "devDependencies": {
     "@types/mocha": "^8.2.0",
