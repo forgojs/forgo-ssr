@@ -9,8 +9,8 @@
   "main": "./dist",
   "types": "./dist/index.d.ts",
   "dependencies": {
-    "forgo": "^1.0.0",
-    "linkedom": "^0.4.24"
+    "forgo": "^1.0.2",
+    "linkedom": "^0.5.5"
   },
   "devDependencies": {
     "@types/mocha": "^8.2.0",
