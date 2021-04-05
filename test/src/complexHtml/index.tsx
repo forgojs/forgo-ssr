@@ -41,7 +41,7 @@ export default function () {
   it("renders a complex component", () => {
     const result = render(<Parent />);
     result.should.equal(
-      `<div data-app-name="test" id="myapp"><p>one</p><p>two</p><p>three</p></div>`
+      `<div id="myapp" data-app-name="test"><p>one</p><p>two</p><p>three</p></div>`
     );
   });
 }

@@ -1,22 +1,18 @@
 import { setCustomEnv, ForgoNode, render } from "forgo";
 
-// facade to a generic JSDOM bootstrap
-const { parseHTML } = require("linkedom");
+import * as jsdom from "jsdom";
+
+const { JSDOM } = jsdom;
 
 // now you can do the same as you would with JSDOM
-const { window, document, HTMLElement } = parseHTML(
-  "<html><body></body></html>"
-);
-
-window.HTMLElement = HTMLElement;
-window.Text = document.createTextNode().constructor;
+const { window } = new JSDOM("<html><body></body></html>");
 
 setCustomEnv({
   window,
-  document,
+  document: window.document,
 });
 
 export default function renderToString(forgoNode: ForgoNode) {
   const { node } = render(forgoNode);
-  return node.toString();
+  return (node as Element).outerHTML;
 }
