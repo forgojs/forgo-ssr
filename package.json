@@ -10,7 +10,7 @@
   "types": "./dist/index.d.ts",
   "dependencies": {
     "@types/jsdom": "^16.2.10",
-    "forgo": "^1.4.4",
+    "forgo": "^1.4.5",
     "jsdom": "^16.5.3"
   },
   "devDependencies": {
