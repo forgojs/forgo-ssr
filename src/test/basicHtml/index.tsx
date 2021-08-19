@@ -1,7 +1,5 @@
-import "mocha";
-import "should";
-
-import render from "../../../";
+import should from "should";
+import render from "../../index";
 
 function MyComponent() {
   return {

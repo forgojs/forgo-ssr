@@ -1,7 +1,6 @@
-import "mocha";
 import "should";
-
-import render from "../../../";
+import should from "should";
+import render from "../../index.js";
 
 function Parent() {
   return {
