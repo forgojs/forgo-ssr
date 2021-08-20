@@ -1,5 +1,5 @@
 import "should";
-import should from "should";
+import * as forgo from "forgo";
 import render from "../../index.js";
 
 function Parent() {
