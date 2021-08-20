@@ -1,5 +1,5 @@
 import * as forgo from "forgo";
-import render from "../../index";
+import render from "../../index.js";
 
 function MyComponent() {
   return {

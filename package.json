@@ -1,6 +1,6 @@
 {
   "name": "forgo-ssr",
-  "version": "1.1.20",
+  "version": "1.1.21",
   "type": "module",
   "main": "./dist/index.js",
   "types": "./src/index.ts",
@@ -27,7 +27,7 @@
   "scripts": {
     "clean": "rimraf ./dist",
     "build": "npm run clean && mkdir -p dist && npx tsc",
-    "test": "node --experimental-specifier-resolution=node node_modules/mocha/lib/cli/cli.js dist/test/test.js"
+    "test": "npx mocha dist/test/test.js"
   },
   "license": "MIT"
 }
